@@ -49,7 +49,7 @@ const App = () => {
         </h1>
         <div className="flex items-center justify-center gap-8 mt-10">
           <div onClick={selectProfile}>
-            <UserCard name={userStore?.user.name} />
+            <UserCard name={userStore?.user?.name} />
           </div>
         </div>
       </div>
