@@ -9,15 +9,15 @@ and add them to your favorite list.
 
 ### Technologies
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,js,ts,react,next,vercel,prisma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,js,ts,react,next,vercel,mongodb,expressjs,nodejs)](https://skillicons.dev)
 
 ## Features:
 
 -The app is using the following supporting packages to enhance the user experience:
 
 * Environment, Typescript, NextJS Setup
-* MongoDB & Prisma connect, Database creation
-* Authentication with NextAuth, Google & Github Login
+* MongoDB connect, Database creation
+* Authentication with JWT, Google Login
 * Full responsiveness on all pages
 * Cookie based authentication
 * API and Controllers creation
