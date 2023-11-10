@@ -41,4 +41,4 @@ npm run dev
 
 ### Live demo
 
-You can visit the website through [this link](https://learning-managment-system-platform.vercel.app/)
+You can visit the website through [this link](https://netflix-clone-25xqmacej-ahmedachraf1.vercel.app/)
