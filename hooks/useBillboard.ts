@@ -1,17 +1,21 @@
-import useSwr from 'swr'
-import fetcher from '@/libs/fetcher';
+import useSwr from "swr";
+import fetcher from "@/libs/fetcher";
 
 const useBillboard = () => {
-  const { data, error, isLoading } = useSwr('/api/random', fetcher, { 
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-   });
+  const { data, error, isLoading } = useSwr(
+    `${process.env.API_URL}api/v1/movies/random`,
+    fetcher,
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    }
+  );
   return {
     data,
     error,
-    isLoading
-  }
+    isLoading,
+  };
 };
 
 export default useBillboard;

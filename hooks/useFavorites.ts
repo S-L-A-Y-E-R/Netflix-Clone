@@ -1,18 +1,26 @@
-import useSwr from 'swr'
-import fetcher from '@/libs/fetcher';
+import useSwr from "swr";
+import fetcher from "@/libs/fetcher";
+
+import { useUserStore } from "./use-store";
 
 const useMovies = () => {
-  const { data, error, isLoading, mutate } = useSwr('/api/favorites', fetcher, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-  });
+  const userStore: any = useUserStore();
+
+  const { data, error, isLoading, mutate } = useSwr(
+    `${process.env.API_URL}api/v1/users/${userStore?.user?.id}/favorite`,
+    fetcher,
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    }
+  );
   return {
     data,
     error,
     isLoading,
-    mutate
-  }
+    mutate,
+  };
 };
 
 export default useMovies;
